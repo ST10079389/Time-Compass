@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="309dp"
+    android:layout_height="407dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginBottom="5dp"
+    app:cardBackgroundColor="@color/dark_grey"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="309dp"
+        android:layout_height="407dp"
+        android:background="@drawable/inputbox">
+
+        <TextView
+            android:id="@+id/displayPosition"
+            android:layout_width="173dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="4dp"
+            android:text="12/01/2002"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/displaytaskImage" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="-"
+            android:textColor="@color/black"
+            android:textSize="48sp"
+            app:layout_constraintStart_toEndOf="@+id/displayStartTime"
+            app:layout_constraintTop_toBottomOf="@+id/displayPosition" />
+
+        <ImageView
+            android:id="@+id/displaytaskImage"
+            android:layout_width="182dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/displayUser" />
+
+        <TextView
+            android:id="@+id/displayPoints"
+            android:layout_width="288dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="42sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Task Name" />
+
+        <TextView
+            android:id="@+id/displayUser"
+            android:layout_width="288dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="Description"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/displayPoints" />
+
+        <TextView
+            android:id="@+id/displayStartTime"
+            android:layout_width="76dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="16dp"
+            android:text="18:00"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/displayPosition" />
+
+        <TextView
+            android:id="@+id/displayEndTime"
+            android:layout_width="83dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="76dp"
+            android:text="21:00"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/displayPosition" />
+
+        <!-- <TextView
+             android:id="@+id/time"
+             android:layout_width="102dp"
+             android:layout_height="37dp"
+             android:layout_marginTop="194dp"
+             android:layout_marginEnd="20dp"
+             android:text="Time"
+             android:textSize="24sp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/descriptionText" /> -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

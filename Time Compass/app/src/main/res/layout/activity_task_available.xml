@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_background"
+    tools:context=".TaskAvailable">
+
+    <!-- Header -->
+    <ImageView
+        android:id="@+id/searchBtn"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/linearLayout2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:backgroundTint="@color/dark_background"
+        android:src="@drawable/search_icon" />
+
+
+    <ImageView
+        android:id="@+id/timerbtn"
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/linearLayout2"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="74dp"
+        android:backgroundTint="@color/dark_background"
+        android:src="@drawable/timer_clock" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/dark_background"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="242dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/tasks_available"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <!-- FAB -->
+
+    <!-- Bottom Navigation View -->
+
+    <!-- ScrollView with Buttons -->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabPopupTray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="-25dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/plus_icon" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"
+        android:background="@color/light_background"
+        app:itemTextColor="@color/grey"
+        app:menu="@menu/bottom_navigation_menu" >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/taskRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_below="@id/searchBtn"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp" />
+
+
+    <ImageView
+        android:layout_width="112dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="-20dp"
+        android:background="@color/dark_background"
+        android:src="@drawable/time_compass_icon" />
+
+</RelativeLayout>

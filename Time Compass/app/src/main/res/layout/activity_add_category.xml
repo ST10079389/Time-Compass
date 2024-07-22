@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCategory"
+    android:background="@color/dark_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="1000dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/infolayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/dark_grey"
+            android:background="@drawable/rounded_corners">
+
+            <EditText
+                android:id="@+id/categoryNameText"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/inputbox"
+                android:ems="10"
+                android:hint="@string/category_name"
+                android:inputType="text"
+                android:paddingStart="24dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/colorOption"
+                android:layout_width="301dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="27dp"
+                android:background="@drawable/inputbox3"
+                android:entries="@array/colorOptions"
+                android:paddingStart="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/categoryNameText" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="179dp"
+                android:layout_height="62dp"
+                android:layout_marginStart="107dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="106dp"
+                android:layout_marginBottom="44dp"
+                android:backgroundTint="@color/blue"
+                android:text="@string/save"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/colorOption"
+                app:strokeColor="#000000"
+                app:strokeWidth="2dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/light_background"
+        app:itemTextColor="@color/grey"
+        app:menu="@menu/bottom_navigation_menu" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabPopupTray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="-25dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/plus_icon" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/dark_background"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="112dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="-20dp"
+            android:background="@color/dark_background"
+            android:src="@drawable/time_compass_icon" />
+
+        <TextView
+            android:layout_width="218dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="40dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/add_category"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>

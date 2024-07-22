@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_background"
+    tools:context=".AddTask">
+
+    <!-- Bottom Navigation View -->
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/light_background"
+        app:itemTextColor="@color/grey"
+        app:menu="@menu/bottom_navigation_menu" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabPopupTray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="-25dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/plus_icon" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/dark_background"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="112dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="-20dp"
+            android:background="@color/dark_background"
+            android:src="@drawable/time_compass_icon" />
+
+        <TextView
+            android:layout_width="218dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="20dp"
+            android:text="@string/add_task"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_below="@id/linearLayout"
+        android:layout_marginBottom="40dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/infolayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_corners">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="85dp"
+                android:layout_marginStart="146dp"
+                android:layout_marginTop="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/galleryButton" />
+
+            <Button
+                android:id="@+id/galleryButton"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/dark_grey"
+                android:text="@string/gallery"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descrptionText"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/cameraButton"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="40dp"
+                android:backgroundTint="@color/dark_grey"
+                android:text="Camera"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descrptionText"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp" />
+
+            <EditText
+                android:id="@+id/descrptionText"
+                android:layout_width="318dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/inputbox"
+                android:ems="10"
+                android:hint="@string/description"
+                android:inputType="text"
+                android:paddingLeft="24dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/startText" />
+
+            <EditText
+                android:id="@+id/startText"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/inputbox"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:paddingLeft="14dp"
+                android:text="@string/start_time"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dateText"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/savebutton"
+                android:layout_width="179dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="56dp"
+                android:layout_marginEnd="104dp"
+                android:layout_marginBottom="21dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/blue"
+                android:text="@string/save"
+                android:textColor="@color/grey"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:layout_constraintVertical_bias="1.0"
+                app:strokeColor="@color/black"
+                app:strokeWidth="4dp" />
+
+            <EditText
+                android:id="@+id/taskNameText"
+                android:layout_width="318dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/inputbox"
+                android:ems="10"
+                android:hint="@string/task_name"
+                android:inputType="text"
+                android:paddingLeft="24dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/categoryOption"
+                android:layout_width="318dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/inputbox3"
+                android:paddingLeft="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/taskNameText" />
+
+            <EditText
+                android:id="@+id/dateText"
+                android:layout_width="318dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/inputbox"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/date"
+                android:paddingLeft="24dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/categoryOption" />
+
+            <EditText
+                android:id="@+id/endText"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="41dp"
+                android:background="@drawable/inputbox"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:paddingLeft="14dp"
+                android:text="@string/end_time"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/startText"
+                app:layout_constraintTop_toBottomOf="@+id/dateText"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</RelativeLayout>
